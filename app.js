@@ -3,6 +3,7 @@ const $ = id => document.getElementById(id);
 const audio = $('audio'), scriptBox = $('scriptBox');
 const WORKER_BASE_URL='https://english-listening-worker.vuahaitac8692.workers.dev';
 let isAdmin=false;
+let mergeFiles=[];
 let lessons=[], currentLesson=null, segments=[], showVi=true, activeId=null, followAudio=true, userScrollUntil=0, previewUrl=null, selectedAudio=null;
 const fmt=n=>{n=Math.max(0,Math.floor(Number(n)||0));return `${String(Math.floor(n/60)).padStart(2,'0')}:${String(n%60).padStart(2,'0')}`;};
 const safeId=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
@@ -35,7 +36,107 @@ $('adminLogout').onclick=()=>{sessionStorage.removeItem('listeningAdminPassword'
 $('loginPassword').addEventListener('keydown',e=>{if(e.key==='Enter')$('adminLogin').click();});
 $('showCreate').onclick=()=>{$('createCard').scrollIntoView({behavior:'smooth',block:'start'});};
 $('newTitle').addEventListener('input',()=>{if(!$('newId').dataset.edited)$('newId').value=safeId($('newTitle').value);});$('newId').addEventListener('input',()=>{$('newId').dataset.edited='1';});
-$('newAudio').onchange=()=>{selectedAudio=$('newAudio').files?.[0]||null;if(previewUrl)URL.revokeObjectURL(previewUrl);if(selectedAudio){previewUrl=URL.createObjectURL(selectedAudio);$('newAudioPreview').src=previewUrl;$('newAudioPreview').classList.remove('hidden');$('audioInfo').textContent=`${selectedAudio.name} · ${(selectedAudio.size/1024/1024).toFixed(2)} MB`;if(selectedAudio.size>25*1024*1024)$('audioInfo').textContent+=' · File vượt 25 MB, hãy nén hoặc chia nhỏ trước khi tạo script.';}else{$('newAudioPreview').classList.add('hidden');}};
+$('newAudio').onchange=()=>setSelectedAudio($('newAudio').files?.[0]||null);
+
+// ===============================
+// MERGE MULTIPLE AUDIO FILES TO MP3 IN THE BROWSER
+// ===============================
+function setSelectedAudio(file){
+  selectedAudio=file;
+  if(previewUrl)URL.revokeObjectURL(previewUrl);
+  if(file){
+    previewUrl=URL.createObjectURL(file);
+    $('newAudioPreview').src=previewUrl;
+    $('newAudioPreview').classList.remove('hidden');
+    $('audioInfo').textContent=`${file.name} · ${(file.size/1024/1024).toFixed(2)} MB${file.size>25*1024*1024?' · Vượt giới hạn 25 MB của bước tạo script.':''}`;
+  }else{
+    $('newAudioPreview').removeAttribute('src');
+    $('newAudioPreview').classList.add('hidden');
+    $('audioInfo').textContent='Chưa chọn audio.';
+  }
+}
+function renderMergeList(){
+  const host=$('mergeList');host.innerHTML='';
+  if(!mergeFiles.length){host.textContent='Chưa chọn file để ghép.';return;}
+  mergeFiles.forEach((file,i)=>{
+    const row=document.createElement('div');row.className='merge-item';
+    const name=document.createElement('span');name.className='merge-name';name.textContent=`${i+1}. ${file.name} · ${(file.size/1024/1024).toFixed(2)} MB`;
+    const up=document.createElement('button');up.type='button';up.textContent='↑';up.title='Chuyển lên';up.disabled=i===0;up.onclick=()=>{[mergeFiles[i-1],mergeFiles[i]]=[mergeFiles[i],mergeFiles[i-1]];renderMergeList();};
+    const down=document.createElement('button');down.type='button';down.textContent='↓';down.title='Chuyển xuống';down.disabled=i===mergeFiles.length-1;down.onclick=()=>{[mergeFiles[i+1],mergeFiles[i]]=[mergeFiles[i],mergeFiles[i+1]];renderMergeList();};
+    const remove=document.createElement('button');remove.type='button';remove.className='danger';remove.textContent='Xóa';remove.onclick=()=>{mergeFiles.splice(i,1);renderMergeList();};
+    row.append(name,up,down,remove);host.append(row);
+  });
+}
+$('mergeFiles').onchange=()=>{
+  const incoming=Array.from($('mergeFiles').files||[]);
+  mergeFiles.push(...incoming);
+  $('mergeFiles').value='';
+  renderMergeList();
+};
+$('clearMerge').onclick=()=>{mergeFiles=[];$('mergeFiles').value='';renderMergeList();};
+$('mergeBtn').onclick=async()=>{
+  const btn=$('mergeBtn');
+  try{
+    if(mergeFiles.length<2)throw Error('Hãy chọn ít nhất 2 file audio để ghép.');
+    if(typeof lamejs==='undefined'||!lamejs.Mp3Encoder)throw Error('Không tải được bộ mã hóa MP3. Hãy kiểm tra kết nối Internet rồi tải lại trang.');
+    btn.disabled=true;
+    status('Đang đọc và ghép các file audio. Không đóng trang trong lúc xử lý…');
+    setProgress(2);
+    const AudioCtx=window.AudioContext||window.webkitAudioContext;
+    if(!AudioCtx)throw Error('Trình duyệt không hỗ trợ xử lý audio. Hãy dùng Chrome hoặc Edge mới.');
+    const ctx=new AudioCtx();
+    const decoded=[];
+    let totalFrames=0;
+    for(let i=0;i<mergeFiles.length;i++){
+      status(`Đang đọc file ${i+1}/${mergeFiles.length}: ${mergeFiles[i].name}`);
+      const buffer=await mergeFiles[i].arrayBuffer();
+      const audioBuffer=await ctx.decodeAudioData(buffer.slice(0));
+      decoded.push(audioBuffer);
+      totalFrames+=Math.ceil(audioBuffer.duration*44100);
+      setProgress(5+35*(i+1)/mergeFiles.length);
+    }
+    await ctx.close();
+    const left=new Float32Array(totalFrames);
+    const right=new Float32Array(totalFrames);
+    let offset=0;
+    for(let i=0;i<decoded.length;i++){
+      const b=decoded[i],len=Math.ceil(b.duration*44100);
+      const channels=Math.min(2,b.numberOfChannels);
+      const sourceL=b.getChannelData(0),sourceR=channels>1?b.getChannelData(1):sourceL;
+      // Linear resampling to the MP3 encoder's fixed 44.1 kHz rate.
+      for(let j=0;j<len;j++){
+        const pos=j*b.sampleRate/44100,idx=Math.floor(pos),frac=pos-idx;
+        const next=Math.min(idx+1,sourceL.length-1);
+        left[offset+j]=sourceL[idx]+(sourceL[next]-sourceL[idx])*frac;
+        const rnext=Math.min(idx+1,sourceR.length-1);
+        right[offset+j]=sourceR[idx]+(sourceR[rnext]-sourceR[idx])*frac;
+      }
+      offset+=len;
+      setProgress(40+25*(i+1)/decoded.length);
+    }
+    const encoder=new lamejs.Mp3Encoder(2,44100,128);
+    const chunks=[];const frameSize=1152;
+    const left16=new Int16Array(frameSize),right16=new Int16Array(frameSize);
+    const toInt16=(v)=>Math.max(-1,Math.min(1,v))*32767;
+    for(let start=0;start<totalFrames;start+=frameSize){
+      const count=Math.min(frameSize,totalFrames-start);
+      for(let j=0;j<count;j++){left16[j]=toInt16(left[start+j]);right16[j]=toInt16(right[start+j]);}
+      const mp3buf=encoder.encodeBuffer(left16.subarray(0,count),right16.subarray(0,count));
+      if(mp3buf.length)chunks.push(new Uint8Array(mp3buf));
+      if(start%(frameSize*100)===0)setProgress(65+30*start/Math.max(1,totalFrames));
+    }
+    const end=encoder.flush();if(end.length)chunks.push(new Uint8Array(end));
+    const mp3Blob=new Blob(chunks,{type:'audio/mpeg'});
+    const titleBase=safeId($('newTitle').value||'audio-ghep')||'audio-ghep';
+    const mergedFile=new File([mp3Blob],`${titleBase}-merged.mp3`,{type:'audio/mpeg',lastModified:Date.now()});
+    setSelectedAudio(mergedFile);
+    $('newAudio').value='';
+    mergeFiles=[];renderMergeList();
+    status(`Đã ghép thành công ${decoded.length} file thành một MP3. Thời lượng khoảng ${fmt(totalFrames/44100)}; dung lượng ${(mergedFile.size/1024/1024).toFixed(2)} MB. File đã được chọn để tạo transcript.`);
+    setProgress(100);
+  }catch(e){status(`Không ghép được audio: ${e.message}`);setProgress(0,false);}
+  finally{btn.disabled=false;}
+};
 async function translateInBatches(items, batchSize=5){
   const output=[];
   for(let i=0;i<items.length;i+=batchSize){
@@ -128,7 +229,7 @@ $('translateBtn').onclick=async()=>{
   }catch(e){status(`Không dịch được: ${e.message}`);}
   finally{$('translateBtn').disabled=false;}
 };
-$('downloadJson').onclick=()=>{collectEditor();download('transcript.json',JSON.stringify(segments,null,2));};$('downloadSrt').onclick=()=>{collectEditor();download('english.srt',getSrt('en'),'text/plain');download('vietnamese.srt',getSrt('vi'),'text/plain');};$('clearDraft').onclick=()=>{if(!confirm('Xóa nội dung bài học đang tạo?'))return;segments=[];$('editorSection').classList.add('hidden');$('newTitle').value='';$('newId').value='';$('newId').dataset.edited='';$('newAudio').value='';selectedAudio=null;if(previewUrl)URL.revokeObjectURL(previewUrl);previewUrl=null;$('newAudioPreview').classList.add('hidden');status('Đã xóa bản nháp.');};
+$('downloadJson').onclick=()=>{collectEditor();download('transcript.json',JSON.stringify(segments,null,2));};$('downloadSrt').onclick=()=>{collectEditor();download('english.srt',getSrt('en'),'text/plain');download('vietnamese.srt',getSrt('vi'),'text/plain');};$('clearDraft').onclick=()=>{if(!confirm('Xóa nội dung bài học đang tạo?'))return;segments=[];$('editorSection').classList.add('hidden');$('newTitle').value='';$('newId').value='';$('newId').dataset.edited='';$('newAudio').value='';selectedAudio=null;mergeFiles=[];if($('mergeFiles'))$('mergeFiles').value='';if($('mergeList'))renderMergeList();if(previewUrl)URL.revokeObjectURL(previewUrl);previewUrl=null;$('newAudioPreview').classList.add('hidden');status('Đã xóa bản nháp.');};
 $('publishBtn').onclick=async()=>{try{collectEditor();const title=$('newTitle').value.trim(),id=safeId($('newId').value||title);if(!title||!id||!selectedAudio)throw Error('Thiếu tên bài, mã bài hoặc file audio.');if(!segments.length)throw Error('Chưa có transcript.');if(segments.some(s=>!s.en.trim()))throw Error('Có câu chưa có nội dung tiếng Anh.');if(!getPassword())throw Error('Vui lòng đăng nhập quản trị trước.');$('publishBtn').disabled=true;status('Đang upload audio, transcript và cập nhật danh sách bài học lên GitHub…');const fd=new FormData();fd.append('title',title);fd.append('id',id);fd.append('audio',selectedAudio,selectedAudio.name);fd.append('transcript',JSON.stringify(segments));const r=await fetch(`${getWorker()}/publish`,{method:'POST',headers:{'x-admin-password':getPassword()},body:fd});const d=await r.json().catch(()=>({}));if(!r.ok)throw Error(d.error||`GitHub upload lỗi (${r.status})`);status(`Đã lưu bài học lên GitHub thành công. Commit: ${d.commit||'đã tạo'}. Trang có thể cần 1–2 phút để cập nhật.`);const entry={id,title,audio:d.audio,transcript:d.transcript};const i=lessons.findIndex(x=>x.id===id);if(i>=0)lessons[i]=entry;else lessons.push(entry);currentLesson=entry;renderLessons();}catch(e){status(`Không lưu được: ${e.message}`);}finally{$('publishBtn').disabled=false;}};
 function loadConfig(){setAdminVisible(false);}
 async function init(){loadConfig();try{const r=await fetch('data/lessons.json',{cache:'no-store'});if(!r.ok)throw Error('Không tải được data/lessons.json');lessons=await r.json();if(!Array.isArray(lessons))throw Error('Định dạng lessons.json không hợp lệ');if(lessons.length)await loadLesson(lessons[0].id);else{$('lessonTitle').textContent='Chưa có bài học';scriptBox.textContent='Tạo bài học mới ở bên dưới.';}renderLessons();}catch(e){$('lessonTitle').textContent='Chưa tải được danh sách bài học';scriptBox.textContent='Kiểm tra data/lessons.json và GitHub Pages.';console.error(e);}}
