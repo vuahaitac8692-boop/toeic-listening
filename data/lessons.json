@@ -4,5 +4,11 @@
     "title": "TOEIC Listening – Bài mẫu 001",
     "audio": "lessons/lesson-001/audio.mp3",
     "transcript": "lessons/lesson-001/transcript.json"
+  },
+  {
+    "id": "toeic-a-buoi-4",
+    "title": "TOEIC A -Buổi 4",
+    "audio": "lessons/toeic-a-buoi-4/audio.mp3",
+    "transcript": "lessons/toeic-a-buoi-4/transcript.json"
   }
 ]
