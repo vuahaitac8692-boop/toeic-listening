@@ -1,17 +1,28 @@
-# Deploy Cloudflare Worker
+# Cloudflare Worker – English Listening
 
-1. Cloudflare Dashboard → Workers & Pages → Create Worker.
-2. Create a Worker and replace its code with `index.js`.
-3. In Settings → Variables and Secrets, add plain variables:
-   - `GITHUB_OWNER` = your GitHub username or organization
-   - `GITHUB_REPO` = `english-listening`
+Worker dùng Cloudflare Workers AI để nhận dạng tiếng Anh và dịch tiếng Việt. Không cần `OPENAI_API_KEY`.
+
+## Cấu hình
+
+1. Trong Cloudflare Worker `english-listening-worker`, mở **Settings → Bindings**.
+2. Thêm **Workers AI** binding với Variable name chính xác là `AI`.
+3. Trong **Settings → Variables and Secrets**, giữ/cấu hình:
+   - `GITHUB_OWNER` = `vuahaitac8692-boop`
+   - `GITHUB_REPO` = `toeic-listening`
    - `GITHUB_BRANCH` = `main`
-   - `TRANSCRIBE_MODEL` = `whisper-1`
-   - `TRANSLATE_MODEL` = `gpt-4o-mini`
-4. Add secrets:
-   - `OPENAI_API_KEY` = OpenAI API key
-   - `GITHUB_TOKEN` = fine-grained GitHub token limited to this repo, Contents read/write
-   - `ADMIN_PASSWORD` = long unique password you choose
-5. Deploy, copy the `workers.dev` URL and enter it in the app's settings.
+   - Secret `GITHUB_TOKEN` = Fine-grained token có quyền Contents: Read and write cho repo `toeic-listening`
+   - Secret `ADMIN_PASSWORD` = mật khẩu Admin hiện tại
+4. Không cần `OPENAI_API_KEY`, `TRANSCRIBE_MODEL` hoặc `TRANSLATE_MODEL`.
+5. Mở **Edit code**, thay toàn bộ nội dung bằng `index.js` trong thư mục này, rồi nhấn **Deploy**.
 
-Do not add the secrets to the GitHub repository or frontend source code.
+## Endpoint
+
+- `GET /health`
+- `POST /transcribe` (multipart form field `audio`)
+- `POST /translate` (JSON `{ "segments": [...] }`, dịch/dịch lại tiếng Việt trong Admin)
+- `POST /publish` (multipart fields `title`, `id`, `audio`, `transcript`)
+- `POST /rename` (JSON `{ "id": "...", "title": "..." }`)
+
+`/transcribe` dùng `@cf/openai/whisper-large-v3-turbo` để tạo timestamp, sau đó dịch theo nhóm bằng `@cf/meta/m2m100-1.2b`. Các nhóm được xử lý tuần tự để giới hạn số lần gọi AI trong một Worker invocation.
+
+Giới hạn file audio của ứng dụng là 25 MB. Nếu file vượt giới hạn hoặc quá dài, hãy chia nhỏ trước khi tải lên.

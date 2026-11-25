@@ -1,10 +1,11 @@
 name = "english-listening-worker"
 main = "index.js"
-compatibility_date = "2026-11-24"
+compatibility_date = "2026-11-25"
 
 [vars]
-GITHUB_OWNER = "YOUR_GITHUB_USERNAME"
-GITHUB_REPO = "english-listening"
+GITHUB_OWNER = "vuahaitac8692-boop"
+GITHUB_REPO = "toeic-listening"
 GITHUB_BRANCH = "main"
-TRANSCRIBE_MODEL = "whisper-1"
-TRANSLATE_MODEL = "gpt-4o-mini"
+
+[ai]
+binding = "AI"
