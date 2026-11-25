@@ -1,0 +1,1142 @@
+[
+  {
+    "id": "1",
+    "time": 0.02,
+    "en": "What is the power source for this computer?",
+    "vi": "Nguồn điện cho máy tính này là gì?"
+  },
+  {
+    "id": "2",
+    "time": 3.06,
+    "en": "A. It's the outlet over there.",
+    "vi": "A. Đó là lối ra ở đó."
+  },
+  {
+    "id": "3",
+    "time": 6.3,
+    "en": "B. The whole system is computerized.",
+    "vi": "B. Toàn bộ hệ thống được máy tính hóa."
+  },
+  {
+    "id": "4",
+    "time": 10,
+    "en": "C. There are five terminals.",
+    "vi": "Có 5 nhà ga."
+  },
+  {
+    "id": "5",
+    "time": 16.54,
+    "en": "Number 2. What do you think of the new office?",
+    "vi": "Câu 2: Bạn nghĩ gì về văn phòng mới?"
+  },
+  {
+    "id": "6",
+    "time": 20.3,
+    "en": "A. On the 10th floor.",
+    "vi": "A. Trên tầng 10."
+  },
+  {
+    "id": "7",
+    "time": 23.32,
+    "en": "B. We'll have a lot more staff.",
+    "vi": "B. Chúng tôi sẽ có nhiều nhân viên hơn."
+  },
+  {
+    "id": "8",
+    "time": 26.6,
+    "en": "C. It's a big improvement over the old one.",
+    "vi": "C. Nó là một sự cải thiện lớn so với cũ."
+  },
+  {
+    "id": "9",
+    "time": 33.22,
+    "en": "Number 3. Which one of these forms will I have to fill out?",
+    "vi": "Số 3: Tôi sẽ phải điền vào mẫu nào trong số này?"
+  },
+  {
+    "id": "10",
+    "time": 38.18,
+    "en": "A. Don't forget to sign at the bottom.",
+    "vi": "A. Đừng quên ký ở dưới cùng."
+  },
+  {
+    "id": "11",
+    "time": 42.06,
+    "en": "B. The one marked D9.",
+    "vi": "B. Một người được đánh dấu D9."
+  },
+  {
+    "id": "12",
+    "time": 45.22,
+    "en": "C. Yes, the firm is our contractor.",
+    "vi": "C. Có, công ty là nhà thầu của chúng tôi."
+  },
+  {
+    "id": "13",
+    "time": 52.34,
+    "en": "Number 4. What time would it be in Singapore now?",
+    "vi": "Số 4: Thời gian ở Singapore bây giờ là mấy giờ?"
+  },
+  {
+    "id": "14",
+    "time": 56.38,
+    "en": "A. Her flight will arrive at 7.",
+    "vi": "A. Chuyến bay của cô sẽ đến lúc 7 giờ."
+  },
+  {
+    "id": "15",
+    "time": 59.88,
+    "en": "B. It's a very important business center.",
+    "vi": "B. Đây là một trung tâm kinh doanh rất quan trọng."
+  },
+  {
+    "id": "16",
+    "time": 63.14,
+    "en": "C. The time difference is 8 hours.",
+    "vi": "C. Sự khác biệt thời gian là 8 giờ."
+  },
+  {
+    "id": "17",
+    "time": 70.84,
+    "en": "Number 5. What should I do with the disks after I finish?",
+    "vi": "Số 5: Tôi nên làm gì với các đĩa sau khi tôi kết thúc?"
+  },
+  {
+    "id": "18",
+    "time": 75.32,
+    "en": "A. Leave them with my secretary.",
+    "vi": "A. Hãy để chúng với thư ký của tôi."
+  },
+  {
+    "id": "19",
+    "time": 78.54,
+    "en": "B. You should finish it by tomorrow.",
+    "vi": "B. Bạn nên hoàn thành nó vào ngày mai."
+  },
+  {
+    "id": "20",
+    "time": 82.08,
+    "en": "C. Install the software whenever you want.",
+    "vi": "C. Cài đặt phần mềm bất cứ khi nào bạn muốn."
+  },
+  {
+    "id": "21",
+    "time": 87.77,
+    "en": "Number 1. Who did you ask about the project?",
+    "vi": "Câu hỏi 1: Bạn hỏi ai về dự án?"
+  },
+  {
+    "id": "22",
+    "time": 91.13,
+    "en": "A. The supervisor should be consulted.",
+    "vi": "A. Người giám sát nên được tư vấn."
+  },
+  {
+    "id": "23",
+    "time": 95.59,
+    "en": "B. Dave Rouse in marketing.",
+    "vi": "B. Dave Rouse trong Marketing"
+  },
+  {
+    "id": "24",
+    "time": 98.99,
+    "en": "C. It will be completed in a week.",
+    "vi": "C. Nó sẽ được hoàn thành trong một tuần."
+  },
+  {
+    "id": "25",
+    "time": 105.72,
+    "en": "Number 2.",
+    "vi": "Số 2"
+  },
+  {
+    "id": "26",
+    "time": 107.08,
+    "en": "Whose office will be next to mine?",
+    "vi": "Văn phòng của ai sẽ ở bên cạnh tôi?"
+  },
+  {
+    "id": "27",
+    "time": 109.76,
+    "en": "A. It is the new manager's.",
+    "vi": "A. Đó là của người quản lý mới."
+  },
+  {
+    "id": "28",
+    "time": 112.86,
+    "en": "B. No, it's Mr. Ford's car.",
+    "vi": "B. Không, đó là chiếc xe của ông Ford."
+  },
+  {
+    "id": "29",
+    "time": 116.3,
+    "en": "C. Your speech will be next.",
+    "vi": "C. Bài phát biểu của bạn sẽ là tiếp theo."
+  },
+  {
+    "id": "30",
+    "time": 122.8,
+    "en": "Number 3.",
+    "vi": "Số 3"
+  },
+  {
+    "id": "31",
+    "time": 124.1,
+    "en": "Who put up the notice on the company bulletin board?",
+    "vi": "Ai đã đưa thông báo lên bảng thông báo của công ty?"
+  },
+  {
+    "id": "32",
+    "time": 127.8,
+    "en": "A. At about 6 o'clock.",
+    "vi": "A. Khoảng 6 giờ."
+  },
+  {
+    "id": "33",
+    "time": 130.94,
+    "en": "B. It was a lane from personnel.",
+    "vi": "B. Đó là một đường dây từ nhân viên."
+  },
+  {
+    "id": "34",
+    "time": 134.36,
+    "en": "C. To let everyone know about it.",
+    "vi": "C. Để cho mọi người biết về nó."
+  },
+  {
+    "id": "35",
+    "time": 140.93,
+    "en": "Number 4.",
+    "vi": "Số 4"
+  },
+  {
+    "id": "36",
+    "time": 142.03,
+    "en": "Whom should I talk to about the property price?",
+    "vi": "Tôi nên nói chuyện với ai về giá bất động sản?"
+  },
+  {
+    "id": "37",
+    "time": 145.33,
+    "en": "A. You can use the property if you want.",
+    "vi": "A. Bạn có thể sử dụng tài sản nếu bạn muốn."
+  },
+  {
+    "id": "38",
+    "time": 148.91,
+    "en": "B. Yes, he's the one in charge of property.",
+    "vi": "B. Có, anh ta là người chịu trách nhiệm về tài sản."
+  },
+  {
+    "id": "39",
+    "time": 152.89,
+    "en": "C. You can discuss it with me.",
+    "vi": "C. Bạn có thể thảo luận với tôi."
+  },
+  {
+    "id": "40",
+    "time": 159.49,
+    "en": "Number 5.",
+    "vi": "Số 5"
+  },
+  {
+    "id": "41",
+    "time": 160.85,
+    "en": "Who has the committee selected as vice president?",
+    "vi": "Ủy ban đã chọn ai làm Phó Chủ tịch?"
+  },
+  {
+    "id": "42",
+    "time": 164.25,
+    "en": "A. No, you should select this one.",
+    "vi": "A. Không, bạn nên chọn cái này."
+  },
+  {
+    "id": "43",
+    "time": 167.43,
+    "en": "B. In the near future.",
+    "vi": "B. Trong tương lai gần."
+  },
+  {
+    "id": "44",
+    "time": 170.19,
+    "en": "C. They haven't decided yet.",
+    "vi": "C. Họ chưa quyết định."
+  },
+  {
+    "id": "45",
+    "time": 175.23,
+    "en": "Number 11.",
+    "vi": "Số 11"
+  },
+  {
+    "id": "46",
+    "time": 177.07,
+    "en": "Who is responsible for inputting the data?",
+    "vi": "Ai chịu trách nhiệm nhập dữ liệu?"
+  },
+  {
+    "id": "47",
+    "time": 180.33,
+    "en": "A. Michelle's handling that.",
+    "vi": "A. Michelle xử lý điều đó."
+  },
+  {
+    "id": "48",
+    "time": 182.71,
+    "en": "B. No, she's not very responsible.",
+    "vi": "B. Không, cô ấy không có trách nhiệm lắm."
+  },
+  {
+    "id": "49",
+    "time": 186.43,
+    "en": "C. She put it over there.",
+    "vi": "C. Cô ấy đặt nó qua đó."
+  },
+  {
+    "id": "50",
+    "time": 193.85,
+    "en": "Number 12.",
+    "vi": "Số 12"
+  },
+  {
+    "id": "51",
+    "time": 195.25,
+    "en": "Is Miss J staying late tonight?",
+    "vi": "Chẳng lẽ hôm nay cô J đến muộn sao?"
+  },
+  {
+    "id": "52",
+    "time": 198.11,
+    "en": "A. I don't know where she's staying.",
+    "vi": "A. Tôi không biết cô ấy ở đâu."
+  },
+  {
+    "id": "53",
+    "time": 201.45,
+    "en": "B. Yes, she'll be here until 9.",
+    "vi": "B. Vâng, cô ấy sẽ ở đây cho đến khi 9."
+  },
+  {
+    "id": "54",
+    "time": 205.07,
+    "en": "C. Yes, she's often late.",
+    "vi": "C. Vâng, cô ấy thường đến muộn."
+  },
+  {
+    "id": "55",
+    "time": 212.93,
+    "en": "Number 13.",
+    "vi": "Số 13"
+  },
+  {
+    "id": "56",
+    "time": 213.95,
+    "en": "Can we walk to the museum or should we take the train?",
+    "vi": "Chúng ta có thể đi bộ đến bảo tàng hay nên đi tàu hỏa?"
+  },
+  {
+    "id": "57",
+    "time": 218.97,
+    "en": "A. I worked at the library.",
+    "vi": "A. Tôi làm việc tại thư viện."
+  },
+  {
+    "id": "58",
+    "time": 221.83,
+    "en": "B. I think we should walk.",
+    "vi": "B. Tôi nghĩ chúng ta nên đi bộ."
+  },
+  {
+    "id": "59",
+    "time": 224.83,
+    "en": "C. No, a one-way ticket.",
+    "vi": "C. Không, vé một chiều."
+  },
+  {
+    "id": "60",
+    "time": 232.48,
+    "en": "Number 14.",
+    "vi": "Số 14"
+  },
+  {
+    "id": "61",
+    "time": 234.3,
+    "en": "When does the letter say we need to confirm our order?",
+    "vi": "Khi nào thư nói rằng chúng ta cần xác nhận đơn đặt hàng của chúng tôi?"
+  },
+  {
+    "id": "62",
+    "time": 237.98,
+    "en": "A. By the first of next month.",
+    "vi": "a) Đến ngày đầu tiên của tháng sau."
+  },
+  {
+    "id": "63",
+    "time": 241.06,
+    "en": "B. Yes, I already confirmed.",
+    "vi": "B. Vâng, tôi đã xác nhận."
+  },
+  {
+    "id": "64",
+    "time": 244.36,
+    "en": "C. I sent the letter yesterday.",
+    "vi": "C. Hôm qua tôi đã gửi thư."
+  },
+  {
+    "id": "65",
+    "time": 252.15,
+    "en": "Number 15.",
+    "vi": "Số 15"
+  },
+  {
+    "id": "66",
+    "time": 254.05,
+    "en": "Who's going to be working on the renovation project?",
+    "vi": "Ai sẽ làm việc trên dự án cải tạo?"
+  },
+  {
+    "id": "67",
+    "time": 256.85,
+    "en": "A. In three weeks.",
+    "vi": "A. Trong 3 tuần."
+  },
+  {
+    "id": "68",
+    "time": 260.21,
+    "en": "B. I've already reviewed the report.",
+    "vi": "B. Tôi đã xem xét báo cáo."
+  },
+  {
+    "id": "69",
+    "time": 263.37,
+    "en": "C. I believe just you and Jack.",
+    "vi": "C. Tôi tin chỉ có anh và Jack."
+  },
+  {
+    "id": "70",
+    "time": 271.3,
+    "en": "Number 16.",
+    "vi": "Số 16"
+  },
+  {
+    "id": "71",
+    "time": 273.38,
+    "en": "Would you like me to fix the computer or install the new server first?",
+    "vi": "Bạn có muốn tôi sửa máy tính hoặc cài đặt máy chủ mới trước không?"
+  },
+  {
+    "id": "72",
+    "time": 277.9,
+    "en": "A. Send the fax, please.",
+    "vi": "A. Vui lòng gửi fax."
+  },
+  {
+    "id": "73",
+    "time": 280.9,
+    "en": "B. The service was excellent.",
+    "vi": "B. Dịch vụ rất tốt."
+  },
+  {
+    "id": "74",
+    "time": 283.82,
+    "en": "C. Please install it first.",
+    "vi": "C. Vui lòng cài đặt trước."
+  },
+  {
+    "id": "75",
+    "time": 291.22,
+    "en": "Number 17.",
+    "vi": "Số 17"
+  },
+  {
+    "id": "76",
+    "time": 293.32,
+    "en": "Have you watched the movie I Lent You?",
+    "vi": "Bạn đã xem phim I Lent You chưa?"
+  },
+  {
+    "id": "77",
+    "time": 295.52,
+    "en": "A. Yes, I'll return it tomorrow.",
+    "vi": "A. Vâng, tôi sẽ trả lại nó vào ngày mai."
+  },
+  {
+    "id": "78",
+    "time": 298.9,
+    "en": "B. Rents are much higher.",
+    "vi": "B. Giá thuê nhà cao hơn nhiều."
+  },
+  {
+    "id": "79",
+    "time": 301.72,
+    "en": "C. When she calls.",
+    "vi": "C. Khi cô ấy gọi"
+  },
+  {
+    "id": "80",
+    "time": 308.88,
+    "en": "Number 18.",
+    "vi": "Số 18"
+  },
+  {
+    "id": "81",
+    "time": 310.68,
+    "en": "That's a new coat, isn't it?",
+    "vi": "Đó là chiếc áo khoác mới, phải không?"
+  },
+  {
+    "id": "82",
+    "time": 313.02,
+    "en": "A. No, I just had it cleaned.",
+    "vi": "A: Không, tôi chỉ cần dọn dẹp nó."
+  },
+  {
+    "id": "83",
+    "time": 316.38,
+    "en": "B. Sure you can.",
+    "vi": "B. Chắc chắn bạn có thể."
+  },
+  {
+    "id": "84",
+    "time": 318.84,
+    "en": "C. I didn't read the news.",
+    "vi": "C. Tôi không đọc tin tức."
+  },
+  {
+    "id": "85",
+    "time": 326.35,
+    "en": "Number 19.",
+    "vi": "Số 19"
+  },
+  {
+    "id": "86",
+    "time": 328.17,
+    "en": "What would you like to eat?",
+    "vi": "Bạn muốn ăn gì?"
+  },
+  {
+    "id": "87",
+    "time": 330.31,
+    "en": "A. A cheese sandwich, please.",
+    "vi": "A. Một chiếc bánh sandwich phô mai, xin vui lòng."
+  },
+  {
+    "id": "88",
+    "time": 333.49,
+    "en": "B. Yes, please.",
+    "vi": "B. Vâng xin vui lòng"
+  },
+  {
+    "id": "89",
+    "time": 335.63,
+    "en": "C. No, I wouldn't.",
+    "vi": "C. Không, tôi sẽ không."
+  },
+  {
+    "id": "90",
+    "time": 342.8,
+    "en": "Number 20.",
+    "vi": "Số 20"
+  },
+  {
+    "id": "91",
+    "time": 344.32,
+    "en": "Why don't you come to the movie with us?",
+    "vi": "Tại sao bạn không đi xem phim cùng chúng tôi?"
+  },
+  {
+    "id": "92",
+    "time": 347.14,
+    "en": "A. Yes, he just moved.",
+    "vi": "A. Vâng, anh ta vừa di chuyển."
+  },
+  {
+    "id": "93",
+    "time": 350.16,
+    "en": "B. Sure, what's playing?",
+    "vi": "B. Chắc chắn, những gì đang chơi?"
+  },
+  {
+    "id": "94",
+    "time": 352.98,
+    "en": "C. I'm coming soon.",
+    "vi": "C. Tôi sắp tới."
+  },
+  {
+    "id": "95",
+    "time": 360.28,
+    "en": "Number 21.",
+    "vi": "Số 21"
+  },
+  {
+    "id": "96",
+    "time": 362.08,
+    "en": "Do you want to sit in the smoking or the non-smoking section?",
+    "vi": "Bạn muốn ngồi trong khu vực hút thuốc hoặc không hút thuốc?"
+  },
+  {
+    "id": "97",
+    "time": 366.24,
+    "en": "A. I don't have a cigarette.",
+    "vi": "A. Tôi không có một điếu thuốc."
+  },
+  {
+    "id": "98",
+    "time": 368.72,
+    "en": "B. That would be fine.",
+    "vi": "B. Điều đó sẽ tốt."
+  },
+  {
+    "id": "99",
+    "time": 371.36,
+    "en": "C. I'd prefer to be away from the smoke.",
+    "vi": "C. Tôi thà tránh xa khói."
+  },
+  {
+    "id": "100",
+    "time": 379.37,
+    "en": "Number 22.",
+    "vi": "Số 22"
+  },
+  {
+    "id": "101",
+    "time": 380.31,
+    "en": "I think Charles is a wonderful designer.",
+    "vi": "Tôi nghĩ Charles là một nhà thiết kế tuyệt vời."
+  },
+  {
+    "id": "102",
+    "time": 384.43,
+    "en": "A. Yes, he is very good.",
+    "vi": "A. Vâng, anh ấy rất giỏi."
+  },
+  {
+    "id": "103",
+    "time": 387.53,
+    "en": "B. Yes, the sign will be put up soon.",
+    "vi": "B. Vâng, dấu hiệu sẽ được đặt lên sớm."
+  },
+  {
+    "id": "104",
+    "time": 391.13,
+    "en": "C. They're new designs.",
+    "vi": "C. Họ là những thiết kế mới."
+  },
+  {
+    "id": "105",
+    "time": 398.47,
+    "en": "Number 23.",
+    "vi": "Số 23"
+  },
+  {
+    "id": "106",
+    "time": 400.41,
+    "en": "This is Apex Travel, right?",
+    "vi": "Đây là Apex Travel phải không?"
+  },
+  {
+    "id": "107",
+    "time": 403.25,
+    "en": "A. No, that's down the hall.",
+    "vi": "A. Không, đó là dưới sảnh."
+  },
+  {
+    "id": "108",
+    "time": 406.11,
+    "en": "B. The left one is nicer.",
+    "vi": "B. Một bên trái là tốt hơn."
+  },
+  {
+    "id": "109",
+    "time": 409.15,
+    "en": "C. I like to travel, too.",
+    "vi": "C. Tôi cũng thích đi du lịch."
+  },
+  {
+    "id": "110",
+    "time": 416.85,
+    "en": "Number 24.",
+    "vi": "Số 24"
+  },
+  {
+    "id": "111",
+    "time": 418.53,
+    "en": "Where's the nearest parking lot?",
+    "vi": "Bãi đậu xe gần nhất ở đâu?"
+  },
+  {
+    "id": "112",
+    "time": 420.87,
+    "en": "A. Five dollars per hour.",
+    "vi": "A. 5 đô la mỗi giờ."
+  },
+  {
+    "id": "113",
+    "time": 423.71,
+    "en": "B. The lot's full right now.",
+    "vi": "B. Lô của đầy ngay bây giờ."
+  },
+  {
+    "id": "114",
+    "time": 426.71,
+    "en": "C. There's one by the theatre.",
+    "vi": "C. Có một bên sân khấu."
+  },
+  {
+    "id": "115",
+    "time": 434.36,
+    "en": "Number 25.",
+    "vi": "Số 25"
+  },
+  {
+    "id": "116",
+    "time": 436.47,
+    "en": "Could you please close the window?",
+    "vi": "Anh có thể đóng cửa sổ được không?"
+  },
+  {
+    "id": "117",
+    "time": 438.54,
+    "en": "A. Oh, no problem.",
+    "vi": "A. Không vấn đề gì."
+  },
+  {
+    "id": "118",
+    "time": 441.3,
+    "en": "B. Yes, it was closed.",
+    "vi": "B. Vâng, nó đã đóng cửa."
+  },
+  {
+    "id": "119",
+    "time": 444.32,
+    "en": "C. I am not pleased with it.",
+    "vi": "C. Tôi không hài lòng với điều đó."
+  },
+  {
+    "id": "120",
+    "time": 451.74,
+    "en": "Number 26.",
+    "vi": "Số 26"
+  },
+  {
+    "id": "121",
+    "time": 453.68,
+    "en": "Why were the shifts rearranged?",
+    "vi": "Tại sao các thay đổi được sắp xếp lại?"
+  },
+  {
+    "id": "122",
+    "time": 456.34,
+    "en": "A. I'll arrange it.",
+    "vi": "A. Tôi sẽ sắp xếp nó."
+  },
+  {
+    "id": "123",
+    "time": 458.68,
+    "en": "B. Judd's going on vacation.",
+    "vi": "B. Judd đang đi nghỉ."
+  },
+  {
+    "id": "124",
+    "time": 461.68,
+    "en": "C. He's on the day shift.",
+    "vi": "C. Anh ta đang trong ngày thay đổi."
+  },
+  {
+    "id": "125",
+    "time": 469.05,
+    "en": "Number 27.",
+    "vi": "Số 27"
+  },
+  {
+    "id": "126",
+    "time": 471.01,
+    "en": "Weren't you supposed to pick up the cake?",
+    "vi": "Chẳng lẽ ngươi không nên nhặt chiếc bánh sao?"
+  },
+  {
+    "id": "127",
+    "time": 473.75,
+    "en": "A. Yes, but the bakery was closed.",
+    "vi": "A. Có, nhưng tiệm bánh đã đóng cửa."
+  },
+  {
+    "id": "128",
+    "time": 477.25,
+    "en": "B. My favorite is chocolate.",
+    "vi": "B. Yêu thích của tôi là sô cô la."
+  },
+  {
+    "id": "129",
+    "time": 480.35,
+    "en": "C. No, it's too heavy to pick up.",
+    "vi": "C. Không, nó quá nặng để nhặt."
+  },
+  {
+    "id": "130",
+    "time": 488.06,
+    "en": "Number 28.",
+    "vi": "Số 28"
+  },
+  {
+    "id": "131",
+    "time": 489.84,
+    "en": "Who does this parking permit belong to?",
+    "vi": "Giấy phép đỗ xe này thuộc về ai?"
+  },
+  {
+    "id": "132",
+    "time": 492.82,
+    "en": "A. I think it's mine.",
+    "vi": "A. Tôi nghĩ đó là của tôi."
+  },
+  {
+    "id": "133",
+    "time": 495.64,
+    "en": "B. They won't permit it.",
+    "vi": "B. Họ sẽ không cho phép."
+  },
+  {
+    "id": "134",
+    "time": 498.4,
+    "en": "C. No, it doesn't.",
+    "vi": "C. Không, không có"
+  },
+  {
+    "id": "135",
+    "time": 505.48,
+    "en": "Number 29.",
+    "vi": "Số 29"
+  },
+  {
+    "id": "136",
+    "time": 507.38,
+    "en": "Didn't Sandra used to work in the sales department?",
+    "vi": "Chẳng phải Sandra đã từng làm việc trong bộ phận bán hàng?"
+  },
+  {
+    "id": "137",
+    "time": 510.34,
+    "en": "A. They need more sales representatives.",
+    "vi": "A. Họ cần nhiều đại diện bán hàng hơn."
+  },
+  {
+    "id": "138",
+    "time": 514.46,
+    "en": "B. The work is done.",
+    "vi": "B. Công việc đã hoàn thành."
+  },
+  {
+    "id": "139",
+    "time": 517,
+    "en": "C. Yes, but she was moved.",
+    "vi": "C. Có, nhưng cô ấy đã di chuyển."
+  },
+  {
+    "id": "140",
+    "time": 524.74,
+    "en": "Number 30.",
+    "vi": "Số 30"
+  },
+  {
+    "id": "141",
+    "time": 526.32,
+    "en": "Can I return my purchase if there are any problems with it?",
+    "vi": "Tôi có thể trả lại mua hàng của tôi nếu có bất kỳ vấn đề với nó?"
+  },
+  {
+    "id": "142",
+    "time": 529.7,
+    "en": "A. As long as you have your receipt.",
+    "vi": "A. Miễn là bạn có hóa đơn."
+  },
+  {
+    "id": "143",
+    "time": 532.78,
+    "en": "B. I have a problem with it.",
+    "vi": "B. Tôi có vấn đề với nó."
+  },
+  {
+    "id": "144",
+    "time": 536.3,
+    "en": "C. When did you purchase it?",
+    "vi": "C. Khi nào bạn mua nó?"
+  },
+  {
+    "id": "145",
+    "time": 538.74,
+    "en": "C. Cindy, this is Jim.",
+    "vi": "Cindy, đây là Jim."
+  },
+  {
+    "id": "146",
+    "time": 543.56,
+    "en": "C. I just received a call from Peter Brown in New York, and he wants to see me tomorrow morning.",
+    "vi": "C. Tôi vừa nhận được một cuộc gọi từ Peter Brown ở New York, và anh ấy muốn gặp tôi vào sáng mai."
+  },
+  {
+    "id": "147",
+    "time": 548.48,
+    "en": "C. So I've decided to fly out there this evening.",
+    "vi": "C. Vì vậy, tôi đã quyết định bay ra ngoài tối nay."
+  },
+  {
+    "id": "148",
+    "time": 551.84,
+    "en": "C. I know it is sudden, but I think he's really want to finalize the deal.",
+    "vi": "C. Tôi biết đó là bất ngờ, nhưng tôi nghĩ ông ấy thực sự muốn hoàn tất thỏa thuận."
+  },
+  {
+    "id": "149",
+    "time": 556.78,
+    "en": "C. I'm so excited about this.",
+    "vi": "C. Tôi rất phấn khích về điều này."
+  },
+  {
+    "id": "150",
+    "time": 558.66,
+    "en": "C. Anyway, the reason for my call is to let you know a few things you need to do for me tomorrow.",
+    "vi": "C. Dù sao, lý do cuộc gọi của tôi là để cho bạn biết một vài điều bạn cần làm cho tôi vào ngày mai."
+  },
+  {
+    "id": "151",
+    "time": 564.54,
+    "en": "C. When you step into the office, please send the document on my desk to Jean at our parent's office.",
+    "vi": "C. Khi bạn bước vào văn phòng, xin vui lòng gửi tài liệu trên bàn của tôi cho Jean tại văn phòng của cha mẹ chúng tôi."
+  },
+  {
+    "id": "152",
+    "time": 570.54,
+    "en": "C. It is very important that you send it tomorrow.",
+    "vi": "C. Điều rất quan trọng là bạn gửi nó vào ngày mai."
+  },
+  {
+    "id": "153",
+    "time": 573.84,
+    "en": "C. Also, could you get in touch with the meter Sanchez and reschedule my appointment with him for some time next week?",
+    "vi": "C. Ngoài ra, bạn có thể liên lạc với đồng hồ đo Sanchez và sắp xếp lại cuộc hẹn của tôi với anh ấy vào tuần tới không?"
+  },
+  {
+    "id": "154",
+    "time": 581.32,
+    "en": "C. And if you need to talk to me, I'll be staying at the King Edward Hotel.",
+    "vi": "C. Và nếu bạn cần nói chuyện với tôi, tôi sẽ ở lại khách sạn King Edward."
+  },
+  {
+    "id": "155",
+    "time": 586.34,
+    "en": "C. Thanks, and I will call you if there are any good news.",
+    "vi": "C. Cảm ơn, và tôi sẽ gọi cho bạn nếu có tin tốt."
+  },
+  {
+    "id": "156",
+    "time": 596.58,
+    "en": "C. Listen and answer the questions.",
+    "vi": "C. Nghe và trả lời các câu hỏi."
+  },
+  {
+    "id": "157",
+    "time": 599.4,
+    "en": "C. Questions 1 through 3 refer to the following talk.",
+    "vi": "C. Câu hỏi 1 đến 3 đề cập đến bài phát biểu sau."
+  },
+  {
+    "id": "158",
+    "time": 603.24,
+    "en": "C. Mr. Stone, this is Cynthia Riddles from the Northwest Gazette.",
+    "vi": "C. Ông Stone, đây là Cynthia Riddles từ tờ Northwest Gazette."
+  },
+  {
+    "id": "159",
+    "time": 608.1,
+    "en": "C. I'm calling to thank you for your past support and to invite you to this year's charity auction.",
+    "vi": "C. Tôi kêu gọi cảm ơn bạn vì sự ủng hộ của bạn trong quá khứ và mời bạn đến cuộc đấu giá từ thiện năm nay."
+  },
+  {
+    "id": "160",
+    "time": 613.38,
+    "en": "C. We are currently raising money for Habitats for Humanity's new homeless shelter.",
+    "vi": "C. Chúng tôi hiện đang huy động tiền cho nơi trú ẩn vô gia cư mới của Habitats for Humanity."
+  },
+  {
+    "id": "161",
+    "time": 617.94,
+    "en": "C. The auction will be on Saturday, June 10th, at the Starlight Inn.",
+    "vi": "C. Cuộc đấu giá sẽ diễn ra vào thứ Bảy, ngày 10 tháng 6, tại Starlight Inn."
+  },
+  {
+    "id": "162",
+    "time": 622.5,
+    "en": "C. You can call us at 828-2225 to reserve your ticket.",
+    "vi": "C. Bạn có thể gọi cho chúng tôi tại 828-2225 để đặt vé."
+  },
+  {
+    "id": "163",
+    "time": 629.5,
+    "en": "C. Thanks for your support. We look forward to seeing you there.",
+    "vi": "C. Cảm ơn sự ủng hộ của bạn.Chúng tôi mong được gặp bạn ở đó."
+  },
+  {
+    "id": "164",
+    "time": 634.48,
+    "en": "C. Number 1. What is Cynthia hoping to accomplish?",
+    "vi": "C. Số 1: Cynthia hy vọng đạt được điều gì?"
+  },
+  {
+    "id": "165",
+    "time": 645.74,
+    "en": "C. Number 2. What does the auction contribute to?",
+    "vi": "Chương 2 - Đấu giá là gì?"
+  },
+  {
+    "id": "166",
+    "time": 656.93,
+    "en": "C. Number 3. How should Mr. Stone reply?",
+    "vi": "Câu 3: Ông Stone nên trả lời như thế nào?"
+  },
+  {
+    "id": "167",
+    "time": 668.13,
+    "en": "C. Questions 4 through 6 refer to the following message.",
+    "vi": "C. Câu hỏi 4 đến 6 đề cập đến thông điệp sau."
+  },
+  {
+    "id": "168",
+    "time": 671.97,
+    "en": "C. Thank you for calling Johnson Services.",
+    "vi": "C. Cảm ơn bạn đã gọi cho Johnson Services."
+  },
+  {
+    "id": "169",
+    "time": 674.63,
+    "en": "C. Due to the high volume of calls at the moment, no one is available to answer your call right now.",
+    "vi": "C. Do khối lượng cuộc gọi cao tại thời điểm này, không ai có thể trả lời cuộc gọi của bạn ngay bây giờ."
+  },
+  {
+    "id": "170",
+    "time": 679.89,
+    "en": "C. Please stay on the line and listen to our pre-recorded message to follow instructions.",
+    "vi": "C. Vui lòng ở lại trên dòng và lắng nghe tin nhắn được ghi lại trước của chúng tôi để làm theo hướng dẫn."
+  },
+  {
+    "id": "171",
+    "time": 684.35,
+    "en": "C. If you know the extension for the party you wish to contact, please dial it now.",
+    "vi": "C. Nếu bạn biết phần mở rộng cho bên mà bạn muốn liên hệ, vui lòng gõ nó ngay."
+  },
+  {
+    "id": "172",
+    "time": 689.61,
+    "en": "C. If you would like to reach the accounting department, please press 1.",
+    "vi": "C. Nếu bạn muốn đến bộ phận kế toán, vui lòng nhấn 1."
+  },
+  {
+    "id": "173",
+    "time": 693.45,
+    "en": "C. If you would like to speak with a customer service agent, please press 2.",
+    "vi": "C. Nếu bạn muốn nói chuyện với một đại lý dịch vụ khách hàng, vui lòng nhấn 2."
+  },
+  {
+    "id": "174",
+    "time": 697.21,
+    "en": "C. If you would like to check on the status of your order, please press 3.",
+    "vi": "C. Nếu bạn muốn kiểm tra trạng thái của đơn đặt hàng của bạn, vui lòng nhấn 3."
+  },
+  {
+    "id": "175",
+    "time": 701.51,
+    "en": "C. If you need further assistance, please press 0 to speak with an operator or stay on the line.",
+    "vi": "C. Nếu bạn cần trợ giúp thêm, vui lòng nhấn 0 để nói chuyện với một nhà điều hành hoặc ở lại đường dây."
+  },
+  {
+    "id": "176",
+    "time": 707.23,
+    "en": "C. Thank you for calling.",
+    "vi": "C. Cảm ơn bạn đã gọi."
+  },
+  {
+    "id": "177",
+    "time": 710.19,
+    "en": "C. Number 4. Where can this message be heard?",
+    "vi": "C. Số 4: Thông điệp này có thể được nghe ở đâu?"
+  },
+  {
+    "id": "178",
+    "time": 721.47,
+    "en": "C. Number 5. Why is the caller instructed to hold?",
+    "vi": "C. Số 5: Tại sao người gọi được yêu cầu giữ?"
+  },
+  {
+    "id": "179",
+    "time": 733.04,
+    "en": "C. Number 6. How can you speak to an operator?",
+    "vi": "Câu 6: Làm thế nào bạn có thể nói chuyện với một nhà điều hành?"
+  },
+  {
+    "id": "180",
+    "time": 744.31,
+    "en": "C. Questions 7 through 9 refer to the following message.",
+    "vi": "C. Câu hỏi 7 đến 9 đề cập đến thông điệp sau."
+  },
+  {
+    "id": "181",
+    "time": 747.37,
+    "en": "C. Hello, this is Jack in Technical Services.",
+    "vi": "C. Xin chào, đây là Jack trong Dịch vụ kỹ thuật."
+  },
+  {
+    "id": "182",
+    "time": 751.25,
+    "en": "C. I am calling you to let you know that we were able to fix the problem with your computer.",
+    "vi": "C. Tôi đang gọi cho bạn để cho bạn biết rằng chúng tôi đã có thể khắc phục sự cố với máy tính của bạn."
+  },
+  {
+    "id": "183",
+    "time": 755.71,
+    "en": "C. It should no longer randomly reboot.",
+    "vi": "C. Nó không nên khởi động lại ngẫu nhiên nữa."
+  },
+  {
+    "id": "184",
+    "time": 758.27,
+    "en": "C. We would like to return your computer today.",
+    "vi": "C. Chúng tôi muốn trả lại máy tính của bạn hôm nay."
+  },
+  {
+    "id": "185",
+    "time": 760.75,
+    "en": "C. Please email or call me at 386 2626.",
+    "vi": "C. Xin vui lòng gửi email hoặc gọi cho tôi tại 386 2626."
+  },
+  {
+    "id": "186",
+    "time": 764.75,
+    "en": "C. If I am not available, you can also contact Lisa, our coordinator, at 386 2489 to let us know what time would be convenient.",
+    "vi": "C. Nếu tôi không có sẵn, bạn cũng có thể liên hệ với Lisa, điều phối viên của chúng tôi, tại 386 2489 để cho chúng tôi biết thời gian nào sẽ thuận tiện."
+  },
+  {
+    "id": "187",
+    "time": 774.31,
+    "en": "C. Or you may stop by the service desk and speak with Bob.",
+    "vi": "C. Hoặc bạn có thể dừng lại ở bàn phục vụ và nói chuyện với Bob."
+  },
+  {
+    "id": "188",
+    "time": 780.39,
+    "en": "C. Number 7. Why is the call being made?",
+    "vi": "Chương 7: Tại sao lại gọi điện?"
+  },
+  {
+    "id": "189",
+    "time": 790.96,
+    "en": "C. Number 8. Which is not a way the customer is instructed to get his computer back?",
+    "vi": "C. Số 8. không phải là một cách mà khách hàng được hướng dẫn để có được máy tính của mình trở lại?"
+  },
+  {
+    "id": "190",
+    "time": 803.88,
+    "en": "C. Number 9. Who is Lisa?",
+    "vi": "Chương 9: Lisa là ai?"
+  }
+]
